@@ -57,6 +57,8 @@ module Jekyll
         return @name if defined?(@name)
         @name = if seo_name
                   seo_name
+                elsif page_title
+                  page_title
                 elsif !homepage_or_about?
                   nil
                 elsif site_social["name"]
